@@ -10,6 +10,10 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://www.core-coutainville.org/%{name}/archive/SOURCES/%{name}-%{vend_ver}-%{vend_release}.tar.gz
 #Source0-MD5: 5ce76261ad969209c86b28e49924fc43
+BuildRequires:	gtk+-devel
+BuildRequires:	autoconf
+BuildRequires:  automake
+BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This program is a little file-manager and allows easy access to
@@ -19,21 +23,16 @@ This program is a little file-manager and allows easy access to
 %setup -q -n %{name}-%{vend_ver}-%{vend_release}
 
 %build
-%{__gettextize}
-%{__aclocal}
-%{__autoconf}
+%{__aclocal} 
+%{__autoconf} 
 %{__autoheader}
 %{__automake}
 %configure
 %{__make}
 
-##./configure --prefix=/usr --bindir=/usr/X11R6/bin --mandir=/usr/share/man
-##make
-
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install
-gzip %{_mandir}/man1/MToolsFM.1
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
