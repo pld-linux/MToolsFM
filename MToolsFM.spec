@@ -9,10 +9,12 @@ Release:	0.1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.core-coutainville.org/%{name}/archive/SOURCES/%{name}-%{vend_ver}-%{vend_release}.tar.gz
-#Source0-MD5: 5ce76261ad969209c86b28e49924fc43
-BuildRequires:	gtk+-devel
+# Source0-md5:	5ce76261ad969209c86b28e49924fc43
+URL:		http://www.core-coutainville.org/MToolsFM/
 BuildRequires:	autoconf
-BuildRequires:  automake
+BuildRequires:	automake
+BuildRequires:	gtk+-devel
+Requires:	mtools
 BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -37,15 +39,17 @@ i posiada fajny interfejs graficzny.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-%files
-%defattr(644,root,root,755)
-%doc COPYING ChangeLog AUTHORS NEWS README THANKS
-%doc %{_mandir}/man1/MToolsFM.1.gz
-%attr(755,root,root) %{_bindir}/MToolsFM
-%{_datadir}/locale/de/LC_MESSAGES/MToolsFM.mo
-%{_datadir}/locale/fr/LC_MESSAGES/MToolsFM.mo
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%files -f %{name}.lang
+%defattr(644,root,root,755)
+%doc AUTHORS ChangeLog README THANKS
+%attr(755,root,root) %{_bindir}/MToolsFM
+%{_mandir}/man1/MToolsFM.1*
