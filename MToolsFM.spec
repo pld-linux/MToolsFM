@@ -17,7 +17,12 @@ BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This program is a little file-manager and allows easy access to
-(dos-)floppies under linux / UNIX. It uses mtools and has a nice GUI.
+(dos-)floppies under Linux / UNIX. It uses mtools and has a nice GUI.
+
+%description
+Program ten jest niewielkim zarz±dc± plików umo¿liwiaj±cym ³atwy
+dostêp spod Linuksa / UNIX-a do DOS-owych dyskietek. Korzysta z mtools
+i posiada fajny interfejs graficzny.
 
 %prep
 %setup -q -n %{name}-%{vend_ver}-%{vend_release}
