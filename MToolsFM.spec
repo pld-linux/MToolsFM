@@ -1,5 +1,5 @@
-%define vend_ver 1.9
-%define vend_release 3
+%define	vend_ver	1.9
+%define	vend_release	3
 
 Summary:	Graphical frontend to mtools - easy access to floppies
 Summary(pl):	Graficzny interfejs do mtools - ³atwy dostêp do dyskietek
@@ -15,7 +15,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+-devel
 Requires:	mtools
-BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This program is a little file-manager and allows easy access to
