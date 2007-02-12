@@ -2,7 +2,7 @@
 %define	vend_release	3
 
 Summary:	Graphical frontend to mtools - easy access to floppies
-Summary(pl.UTF-8):   Graficzny interfejs do mtools - łatwy dostęp do dyskietek
+Summary(pl.UTF-8):	Graficzny interfejs do mtools - łatwy dostęp do dyskietek
 Name:		MToolsFM
 Version:	%{vend_ver}.%{vend_release}
 Release:	0.1
