@@ -2,7 +2,7 @@
 %define	vend_release	3
 
 Summary:	Graphical frontend to mtools - easy access to floppies
-Summary(pl):	Graficzny interfejs do mtools - ³atwy dostêp do dyskietek
+Summary(pl.UTF-8):   Graficzny interfejs do mtools - Å‚atwy dostÄ™p do dyskietek
 Name:		MToolsFM
 Version:	%{vend_ver}.%{vend_release}
 Release:	0.1
@@ -21,9 +21,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This program is a little file-manager and allows easy access to
 (dos-)floppies under Linux / UNIX. It uses mtools and has a nice GUI.
 
-%description -l pl
-Program ten jest niewielkim zarz±dc± plików umo¿liwiaj±cym ³atwy
-dostêp spod Linuksa / UNIX-a do DOS-owych dyskietek. Korzysta z mtools
+%description -l pl.UTF-8
+Program ten jest niewielkim zarzÄ…dcÄ… plikÃ³w umoÅ¼liwiajÄ…cym Å‚atwy
+dostÄ™p spod Linuksa / UNIX-a do DOS-owych dyskietek. Korzysta z mtools
 i posiada fajny interfejs graficzny.
 
 %prep
