@@ -23,7 +23,7 @@ This program is a little file-manager and allows easy access to
 
 %description -l pl.UTF-8
 Program ten jest niewielkim zarządcą plików umożliwiającym łatwy
-dostęp spod Linuksa / UNIX-a do DOS-owych dyskietek. Korzysta z mtools
+dostęp spod Linuksa / Uniksa do DOS-owych dyskietek. Korzysta z mtools
 i posiada fajny interfejs graficzny.
 
 %prep
